@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           children: [
             Image.network(
-              "https://www.example.com/your_image.jpg", // Ensure this is a valid image URL
+              "https://via.placeholder.com/150", // Placeholder image URL
               fit: BoxFit.cover,
             ),
             SizedBox(height: 20),
@@ -27,8 +27,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: 20),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 40.0),
+              padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 40.0),
               child: Column(
                 children: [
                   TextFormField(
@@ -43,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                     },
                   ),
                   TextFormField(
-                    obscureText: true, // To obscure password input
+                    obscureText: true,
                     decoration: InputDecoration(
                       hintText: 'Enter Password',
                       labelText: 'Password',
@@ -52,48 +51,35 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
-
             SizedBox(height: 20),
-
             Material(
-              
-                color: Colors.blue,
-                borderRadius: BorderRadius.circular(8),
-              
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(8),
               child: InkWell(
-                onTap:() async {
+                onTap: () async {
                   setState(() {
                     ChangeBtn = true;
                   });
                   await Future.delayed(const Duration(seconds: 1));
-                  Navigator.pushNamed(context, MyRoutes.homeRoute);
+                  await Navigator.pushNamed(context, MyRoutes.homeRoute);
+                  setState(() {
+                    ChangeBtn = false;
+                  });
                 },
                 child: AnimatedContainer(
                   duration: Duration(seconds: 1),
                   width: ChangeBtn ? 50 : 150,
                   height: 50,
-                  // color:Colors.blue,
                   alignment: Alignment.center,
                   child: ChangeBtn
                       ? Icon(Icons.done)
                       : Text(
                           "Login",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                         ),
-                  // decoration: BoxDecoration(
-                  //     color: ChangeBtn ? Colors.green : Colors.blue,
-                  //     borderRadius: BorderRadius.circular(10)),
                 ),
               ),
-            )
-
-            // ElevatedButton(
-            //   child: Text('Login'),
-            //   onPressed: () {
-            //     Navigator.pushNamed(context, MyRoutes.homeRoute);
-            //   },
-            // ),
+            ),
           ],
         ),
       ),
