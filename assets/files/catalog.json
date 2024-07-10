@@ -1,0 +1,101 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "iPhone 12 Pro",
+        "description": "Apple iPhone 12th generation",
+        "color": "#33505a",
+        "image": "https://m.media-amazon.com/images/I/81c50PU+lpL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 999
+      },
+      {
+        "id": 2,
+        "name": "Macbook Pro",
+        "description": "Apple Macbook Pro 2021",
+        "color": "#33505a",
+        "image": "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 1499
+      },
+      {
+        "id": 3,
+        "name": "Apple Watch",
+        "description": "Apple Watch Series 6",
+        "color": "#33505a",
+        "image": "https://m.media-amazon.com/images/I/811GOkDSOaL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 399
+      },
+      {
+        "id": 4,
+        "name": "iPad Pro",
+        "description": "Apple iPad Pro 2021",
+        "color": "#33505a",
+        "image": "https://m.media-amazon.com/images/I/8124D1qS2UL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 799
+      },
+      {
+        "id": 5,
+        "name": "Mac Mini",
+        "description": "Apple Mac Mini 2021",
+        "color": "#33505a",
+        "image": "https://m.media-amazon.com/images/I/61jup8h--XL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 699
+      },
+      {
+        "id": 6,
+        "name": "AirPods Pro",
+        "description": "Apple AirPods Pro",
+        "color": "#ffffff",
+        "image": "https://m.media-amazon.com/images/I/71bhWgQK-cL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 249
+      },
+      {
+        "id": 7,
+        "name": "Apple TV 4K",
+        "description": "Apple TV 4K 2021",
+        "color": "#000000",
+        "image": "https://m.media-amazon.com/images/I/81lqqFqk6tL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 179
+      },
+      {
+        "id": 8,
+        "name": "iMac",
+        "description": "Apple iMac 2021",
+        "color": "#d1d5db",
+        "image": "https://m.media-amazon.com/images/I/71KR2i6-WaL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 1299
+      },
+      {
+        "id": 9,
+        "name": "HomePod mini",
+        "description": "Apple HomePod mini",
+        "color": "#1c1c1e",
+        "image": "https://m.media-amazon.com/images/I/71aXzv34N9L._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 99
+      },
+      {
+        "id": 10,
+        "name": "Apple Pencil",
+        "description": "Apple Pencil 2nd Generation",
+        "color": "#ffffff",
+        "image": "https://m.media-amazon.com/images/I/71Qzv4-hzML._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 129
+      },
+      {
+        "id": 11,
+        "name": "iPhone 13",
+        "description": "Apple iPhone 13",
+        "color": "#ffcc00",
+        "image": "https://m.media-amazon.com/images/I/71xb2xkN5qL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 799
+      },
+      {
+        "id": 12,
+        "name": "Macbook Air",
+        "description": "Apple Macbook Air 2020",
+        "color": "#ffffff",
+        "image": "https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UY327_FMwebp_QL65_.jpg",
+        "price": 999
+      }
+    ]
+  }
+  
