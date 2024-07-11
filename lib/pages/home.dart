@@ -19,33 +19,49 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     // TODO: implement initState
-    super.initState();  
+    super.initState();
     loadData();
-      //build hone ke pehle ye call hoga to get the data from the json pehle hi
+    //build hone ke pehle ye call hoga to get the data from the json pehle hi
   }
 
-  loadData() async{
+  loadData() async {
     final Json = await rootBundle.loadString("assets/files/catalog.json");
     final decodedJson = jsonDecode(Json);
     var productData = decodedJson["items"];
     CatalogModel.items = List.from(productData)
-        .map<Item>((item) => Item.fromMap(item)).toList();
+        .map<MyItems>((item) => MyItems.fromMap(item))
+        .toList();
+      setState(() {
+        
+      });  
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Catalog App', textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),)),
+        title: Center(
+            child: Text(
+          'Catalog App',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontWeight: FontWeight.bold),
+        )),
       ),
-      body:Padding(
+      body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: ListView.builder(                              //builder use kiya scrolling m naye items bnte rahenge
-          itemCount:CatalogModel.items.length ,
-          itemBuilder:(context,index){
-            return ItemWidgets(item:CatalogModel.items[index],);   //itemwidget m item pass kiya aur required kr rkha h usko vaha pr
-          } ,
-        ),
+        child: CatalogModel.items.isNotEmpty
+        ? ListView.builder(
+          //builder use kiya scrolling m naye items bnte rahenge
+          itemCount: CatalogModel.items.length,
+          itemBuilder: (context, index) {
+            return ItemWidgets(
+              item: CatalogModel.items[index],
+            );
+          },
+        )
+        :Center(
+          child: CircularProgressIndicator(),
+        )
       ),
       drawer: MyDrawer(),
     );
